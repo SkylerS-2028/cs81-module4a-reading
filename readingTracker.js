@@ -71,3 +71,11 @@ addReadBook("Saturday", "Dune", 50);
 printDailySummary(readingLog);
 console.log("Total minutes read:", totalReadingMinutes(readingLog));
 console.log("Most read book:", mostReadBook(readingLog));
+
+/* 
+My suggestion: 
+I noticed that in the addReadBook, when adding an entry is automatically adds a new entry to the readingLog array; however, looking at the other functions, they require you to specify which log to apply their function.
+My suggestion would be to add another perameter to specify which reading log array a new entry will be added to. 
+This would be helpful because it would create more opportunities for the function to apply in different situations, and also make the other functions more useful, because there would be more situations for them to apply to.
+Additionally, it would make it possible for more readingLogs, for different weeks or different people.
+*/
