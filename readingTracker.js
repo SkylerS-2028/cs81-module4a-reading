@@ -7,13 +7,19 @@ const readingLog = [
   { day: "Friday", book: "1984", minutes: 15 }
 ];
 
-// Adds a new reading entry to the log
+/* 
+The addReadBook() function's purpose is to add a new reading entry to the reading log. 
+Using the inputs of the day, the name of the book, and the amount of mintues spent reading, this function adds a new object to the readingLog array and has no return. 
+*/
 function addReadBook(day, book, minutes) { 
   const newEntry = { day, book, minutes }; //Adds a new object element to an array with three properties, day, book, and minutes. 
   readingLog.push(newEntry);
 }
 
-// Returns total minutes spent reading all week
+/* 
+The totalReadingMinutes() function's purpose is to calculate the total amount of minutes spent reading.
+It uses the input of the log that will be used to calculate the total reading time, and it returns the total time spent reading in the chosen log.
+*/
 function totalReadingMinutes(log) {
   let total = 0; 
   for (let entry of log) { //This loop cycles through every entry of log and adds the minutes recorded from that entry to the total.
@@ -22,7 +28,10 @@ function totalReadingMinutes(log) {
   return total;
 }
 
-// Returns the book read most frequently
+/* 
+The mostReadBook() function's purpose is to find the book that has been read the most frequently in the reading log. 
+It requires the input of which log it is finding the most read book for, and returns the title of the book that was read the most.
+*/
 function mostReadBook(log) {
   const bookCounts = {};
   for (let entry of log) { // This loop is going through every entry in log and first deciding whether the book from that entry has been logged before in the object bookCounts. 
@@ -46,7 +55,11 @@ function mostReadBook(log) {
   return maxBook;
 }
 
-// Prints a summary of minutes read per day
+/* 
+The printDailySummary() function's purpose is to print a summary of each day from the log. 
+It requires the input of which log it will summarize, and prints to the console the entry day, the name of the book that was read that day, and number of minutes read.
+This function has no return.
+*/
 function printDailySummary(log) {
   for (let entry of log) { // For every element in log, this loop cycles through and prints to the console the day, amount of minutes, and the name of the book.
     console.log(`${entry.day}: ${entry.minutes} mins reading "${entry.book}"`);
