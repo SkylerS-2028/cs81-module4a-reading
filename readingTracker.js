@@ -7,6 +7,15 @@ const readingLog = [
   { day: "Friday", book: "1984", minutes: 15 }
 ];
 
+ const secondReadingLog = [
+  { day: "Monday", book: "Coraline", minutes: 40 },
+  { day: "Tuesday", book: "Crime and Punishment", minutes: 70 },
+  { day: "Wednesday", book: "Frankenstein", minutes: 20 },
+  { day: "Thursday", book: "Coraline", minutes: 50 },
+  { day: "Friday", book: "Frankenstein", minutes: 30 },
+  { day: "Saturday", book: "Frankenstein", minutes: 30 },
+ ]
+
 /* 
 The addReadBook() function's purpose is to add a new reading entry to the reading log. 
 Using the inputs of the day, the name of the book, and the amount of mintues spent reading, this function adds a new object to the readingLog array and has no return. 
@@ -51,7 +60,7 @@ function mostReadBook(log) {
       maxCount = bookCounts[book]; // The highest count becomes the number of times the book has been read. 
     }
   }
-// After this loop is complete, we have the book that has been read the most times in the maxBook variable and the amount of times it has been read in the maxCount variable. 
+  // After this loop is complete, we have the book that has been read the most times in the maxBook variable and the amount of times it has been read in the maxCount variable. 
   return maxBook;
 }
 
@@ -71,6 +80,8 @@ addReadBook("Saturday", "Dune", 50);
 printDailySummary(readingLog);
 console.log("Total minutes read:", totalReadingMinutes(readingLog));
 console.log("Most read book:", mostReadBook(readingLog));
+
+console.log("Total minutes read in second reading log:", totalReadingMinutes(secondReadingLog));
 
 /* 
 My suggestion: 
