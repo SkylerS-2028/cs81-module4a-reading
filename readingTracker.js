@@ -1,3 +1,8 @@
+
+// Skyler Stevenson
+// https://github.com/SkylerS-2028/cs81-module4a-reading
+
+
 // Weekly reading log
 const readingLog = [
   { day: "Monday", book: "Dune", minutes: 30 },
